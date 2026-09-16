@@ -26,7 +26,7 @@ function build() {
   nodes.forEach((a, i) => nodes.slice(i + 1).forEach((b, j) => {
     if (Math.hypot(a.x - b.x, a.y - b.y) < 112) edges.push({ a: i, b: i + j + 1, el: element('line', { stroke: 'var(--network-line)', 'stroke-width': .8, opacity: .37 }) });
   }));
-  nodes.forEach((n, i) => { n.el = element('circle', { r: n.r, fill: i % 4 === 0 ? 'var(--orange)' : i % 3 === 0 ? 'var(--paper)' : 'var(--network-node)', stroke: i % 4 === 0 ? 'var(--orange)' : 'var(--network-node)', 'stroke-width': 1.3 }); });
+  nodes.forEach((n, i) => { n.el = element('circle', { r: n.r, fill: i % 4 === 0 ? 'var(--accent)' : i % 3 === 0 ? 'var(--paper)' : 'var(--network-node)', stroke: i % 4 === 0 ? 'var(--accent)' : 'var(--network-node)', 'stroke-width': 1.3 }); });
   draw(0);
 }
 function draw(time) {

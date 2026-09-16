@@ -1,41 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap');
 :root {
-  --paper:#f8f7f2;
-  --ink:#25372d;
-  --muted:#667168;
-  --orange:#e76438;
-  --line:#dcded5;
-  --green:#dfe8da;
-  --selection:#f7c7ac;
-  --control-border:#b8bfb4;
-  --dot-grid:#cbd1c4;
-  --live-node:#668369;
-  --quiet-heading:#889180;
-  --card-shadow:#26382d0a;
-  --company-surface:#eeeee5;
-  --product-surface:#e8eee5;
-  --pill-border:#bbc3b6;
-  --arrow-border:#b6c0b0;
-  --card-text:#5c685e;
-  --card-rule:#ccd1c3;
-  --card-caption:#53634f;
-  --volume-border:#789178;
-  --volume-ring:#788f7270;
-  --volume-fill:#91a68630;
-  --volume-detail:#a8b99d90;
-  --volume-shadow:#e4eadb66;
-  --volume-caption:#7b8a73;
-  --separator:#a2ab99;
-  --interest-surface:#f0f1e9;
-  --interest-rule:#d4d9ce;
-  --interest-icon:#698064;
-  --link-rule:#afbba7;
-  --tag-border:#cdd4c6;
-  --contact-surface:#eceee3;
-  --contact-border:#dce1d1;
-  --contact-rule:#bac4ae;
-  --network-line:#8c9a83;
-  --network-node:#6f8968;
+  --paper:#f7faff;
+  --ink:#182d4b;
+  --muted:#586a80;
+  --accent:#3057ce;
+  --line:#d4deeb;
+  --green:#e0edf1;
+  --selection:#c8d9ff;
+  --control-border:#acbdd4;
+  --dot-grid:#c6d5e5;
+  --live-node:#467d92;
+  --quiet-heading:#708399;
+  --card-shadow:#1835500a;
+  --company-surface:#eaf0fc;
+  --product-surface:#e4f1f3;
+  --pill-border:#b3c4d7;
+  --arrow-border:#adbfce;
+  --card-text:#4b6079;
+  --card-rule:#c6d5e3;
+  --card-caption:#455e76;
+  --volume-border:#578291;
+  --volume-ring:#57829170;
+  --volume-fill:#72a4ae30;
+  --volume-detail:#82acb590;
+  --volume-shadow:#d3e8ef66;
+  --volume-caption:#577987;
+  --separator:#8fa8bd;
+  --interest-surface:#edf2fa;
+  --interest-rule:#cedae8;
+  --interest-icon:#457c92;
+  --link-rule:#a4bacd;
+  --tag-border:#c3d2e5;
+  --contact-surface:#e4ebfa;
+  --contact-border:#ced9ed;
+  --contact-rule:#aabbdb;
+  --network-line:#7c98b3;
+  --network-node:#4e8598;
 }
 * {
   box-sizing:border-box;
@@ -62,7 +62,7 @@ button {
   background:var(--selection);
 }
 a:focus-visible,button:focus-visible {
-  outline:3px solid var(--orange);
+  outline:3px solid var(--accent);
   outline-offset:6px;
 }
 .wrap {
@@ -86,7 +86,7 @@ a:focus-visible,button:focus-visible {
   gap:9px;
 }
 .wordmark span {
-  color:var(--orange);
+  color:var(--accent);
   font-size:34px;
 }
 .header nav {
@@ -97,7 +97,7 @@ a:focus-visible,button:focus-visible {
   font-weight:500;
 }
 .header nav a:hover {
-  color:var(--orange);
+  color:var(--accent);
 }
 .nav-contact {
   border:1px solid var(--control-border);
@@ -127,7 +127,7 @@ a:focus-visible,button:focus-visible {
 .status-dot {
   width:7px;
   height:7px;
-  background:var(--orange);
+  background:var(--accent);
   border-radius:50%;
 }
 h1,h2,h3,p {
@@ -144,7 +144,7 @@ h1 {
   margin-bottom:28px;
 }
 h1 em {
-  color:var(--orange);
+  color:var(--accent);
   font-style:normal;
 }
 p {
@@ -172,7 +172,7 @@ p {
   transition:background .2s,transform .2s;
 }
 .button:hover {
-  background:var(--orange);
+  background:var(--accent);
   transform:translateY(-3px);
 }
 .idea-space {
@@ -273,7 +273,7 @@ p {
   color:var(--muted);
 }
 .location-mark {
-  color:var(--orange);
+  color:var(--accent);
   font-size:15px;
   margin-right:6px;
 }
@@ -365,7 +365,7 @@ h2 {
   transform:rotate(-13deg);
 }
 .company-art span {
-  background:var(--orange);
+  background:var(--accent);
   width:23px;
   border-radius:20px;
   transform:skewY(-13deg);
@@ -398,8 +398,8 @@ h2 {
   font-weight:600;
   margin-bottom:14px;
 }
-.orange {
-  color:var(--orange);
+.accent {
+  color:var(--accent);
 }
 .card-copy>p:not(.small-label) {
   font-size:13px;
@@ -500,7 +500,7 @@ h2 {
   margin-bottom:50px;
 }
 .asterisk {
-  color:var(--orange);
+  color:var(--accent);
   font-size:75px;
   line-height:1;
   transition:transform .7s;
@@ -546,7 +546,7 @@ h2 {
   padding-bottom:3px;
 }
 .text-links a:hover {
-  color:var(--orange);
+  color:var(--accent);
 }
 .tags span {
   border:1px solid var(--tag-border);
@@ -594,7 +594,7 @@ h2 {
   transition:transform .2s;
 }
 .paper-list a:hover h3 {
-  color:var(--orange);
+  color:var(--accent);
 }
 .paper-list a:hover .paper-arrow {
   transform:translate(3px,-3px);
@@ -618,7 +618,7 @@ h2 {
 }
 .contact h2>span {
   display:inline-block;
-  color:var(--orange);
+  color:var(--accent);
   margin-left:20px;
 }
 .contact-links {
@@ -636,7 +636,7 @@ h2 {
   padding-bottom:10px;
 }
 .contact-links a:hover {
-  color:var(--orange);
+  color:var(--accent);
 }
 .footer {
   display:flex;
