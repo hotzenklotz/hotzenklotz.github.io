@@ -14,4 +14,4 @@ Run `python3 -m http.server 8000`, then open http://localhost:8000.
 
 No build step or package installation is required. Google Fonts supplies DM Sans and Manrope, with sans-serif fallbacks. The diagram gently breathes and drifts on its own; hover and touch amplify its motion, which eases back after release. It respects reduced-motion preferences and pauses when offscreen or the browser tab is hidden.
 
-Decorative icons use inline SVG symbols for consistent rendering on iOS. Hover effects are limited to devices with a fine pointer and hover support; touch controls have press feedback and larger tap targets.
+Decorative icons use inline SVG symbols for consistent rendering on iOS. Hover effects are limited to devices with a fine pointer and hover support; touch controls have press feedback and larger tap targets. The scalableminds bars and WEBKNOSSOS layers also animate without input while visible, with reduced-motion preferences respected.

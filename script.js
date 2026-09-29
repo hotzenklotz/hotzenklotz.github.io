@@ -114,3 +114,16 @@ new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; restart(
 document.addEventListener('visibilitychange', restart);
 document.querySelector('#year').textContent = new Date().getFullYear();
 build();
+
+// Keep ambient project motion running only while the illustrations are visible.
+const projectObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.closest('.work-card').classList.toggle('is-in-view', entry.isIntersecting);
+  });
+});
+document.querySelectorAll('.company-art, .volume-art').forEach(art => projectObserver.observe(art));
+function syncProjectMotion() {
+  document.documentElement.classList.toggle('motion-paused', document.hidden);
+}
+document.addEventListener('visibilitychange', syncProjectMotion);
+syncProjectMotion();
