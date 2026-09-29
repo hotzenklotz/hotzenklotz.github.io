@@ -96,9 +96,6 @@ a:focus-visible,button:focus-visible {
   font-size:13px;
   font-weight:500;
 }
-.header nav a:hover {
-  color:var(--accent);
-}
 .nav-contact {
   border:1px solid var(--control-border);
   padding:12px 18px;
@@ -170,10 +167,6 @@ p {
   border-radius:4px;
   font-size:13px;
   transition:background .2s,transform .2s;
-}
-.button:hover {
-  background:var(--accent);
-  transform:translateY(-3px);
 }
 .idea-space {
   position:relative;
@@ -321,10 +314,6 @@ h2 {
   overflow:hidden;
   transition:transform .3s,box-shadow .3s;
 }
-.work-card:hover {
-  transform:translateY(-5px);
-  box-shadow:0 12px 25px var(--card-shadow);
-}
 .company-card {
   background:var(--company-surface);
 }
@@ -352,10 +341,6 @@ h2 {
   place-items:center;
   transition:background .2s;
 }
-.work-card:hover .circle-arrow {
-  background:var(--ink);
-  color:white;
-}
 .company-art {
   height:211px;
   display:flex;
@@ -382,9 +367,6 @@ h2 {
 }
 .company-art span:nth-child(4) {
   height:147px;
-}
-.work-card:hover .company-art span:nth-child(even) {
-  transform:skewY(-13deg) translateY(-10px);
 }
 .small-label {
   font-size:8px;
@@ -451,12 +433,6 @@ h2 {
   z-index:1;
   opacity:.45;
 }
-.work-card:hover .plane-one {
-  translate:0 -8px;
-}
-.work-card:hover .plane-three {
-  translate:0 8px;
-}
 .volume-caption {
   position:absolute;
   bottom:12px;
@@ -505,9 +481,6 @@ h2 {
   line-height:1;
   transition:transform .7s;
 }
-.asterisk:hover {
-  transform:rotate(180deg);
-}
 .interests-grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -544,9 +517,6 @@ h2 {
 .text-links a {
   border-bottom:1px solid var(--link-rule);
   padding-bottom:3px;
-}
-.text-links a:hover {
-  color:var(--accent);
 }
 .tags span {
   border:1px solid var(--tag-border);
@@ -593,12 +563,6 @@ h2 {
   top:44%;
   transition:transform .2s;
 }
-.paper-list a:hover h3 {
-  color:var(--accent);
-}
-.paper-list a:hover .paper-arrow {
-  transform:translate(3px,-3px);
-}
 .contact {
   background:var(--contact-surface);
   border:1px solid var(--contact-border);
@@ -634,9 +598,6 @@ h2 {
   gap:35px;
   border-bottom:1px solid var(--contact-rule);
   padding-bottom:10px;
-}
-.contact-links a:hover {
-  color:var(--accent);
 }
 .footer {
   display:flex;
@@ -883,6 +844,123 @@ h2 {
     display:none;
   }
 }
+/* Shared SVG icons bypass platform emoji and symbol font substitution. */
+.icon-definitions {
+  position:absolute;
+  width:0;
+  height:0;
+  overflow:hidden;
+  pointer-events:none;
+}
+.icon {
+  display:inline-block;
+  width:1em;
+  height:1em;
+  min-width:12px;
+  min-height:12px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vertical-align:-.13em;
+  flex-shrink:0;
+  pointer-events:none;
+}
+.button {
+  align-items:center;
+}
+.asterisk .icon {
+  display:block;
+}
+.diagram-bottom button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:8px 12px;
+  border-radius:4px;
+}
+a, button {
+  -webkit-tap-highlight-color:transparent;
+}
+/* Color feedback is shared by keyboard focus and press, without moving targets. */
+.button:is(:active, :focus-visible) {
+  background:var(--accent);
+}
+.work-card:is(:active, :focus-visible) {
+  border-color:var(--accent);
+}
+.work-card:is(:active, :focus-visible) .circle-arrow {
+  background:var(--accent);
+  color:white;
+}
+.header nav a:is(:active, :focus-visible),
+.text-links a:is(:active, :focus-visible),
+.contact-links a:is(:active, :focus-visible),
+.footer a:is(:active, :focus-visible),
+.paper-list a:is(:active, :focus-visible) h3 {
+  color:var(--accent);
+}
+.diagram-bottom button:is(:active, :focus-visible) {
+  background:var(--company-surface);
+}
+@media (hover:hover) and (pointer:fine) {
+  .header nav a:hover {
+    color:var(--accent);
+  }
+  .button:hover {
+    background:var(--accent);
+    transform:translateY(-3px);
+  }
+  .work-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px var(--card-shadow);
+  }
+  .work-card:hover .circle-arrow {
+    background:var(--ink);
+    color:white;
+  }
+  .work-card:hover .company-art span:nth-child(even) {
+    transform:skewY(-13deg) translateY(-10px);
+  }
+  .work-card:hover .plane-one {
+    translate:0 -8px;
+  }
+  .work-card:hover .plane-three {
+    translate:0 8px;
+  }
+  .asterisk:hover {
+    transform:rotate(180deg);
+  }
+  .text-links a:hover {
+    color:var(--accent);
+  }
+  .paper-list a:hover h3 {
+    color:var(--accent);
+  }
+  .paper-list a:hover .paper-arrow {
+    transform:translate(3px,-3px);
+  }
+  .contact-links a:hover {
+    color:var(--accent);
+  }
+}
+@media (pointer:coarse) {
+  .nav-contact, .header nav a, .contact-links a, .footer a, .text-links a {
+    display:inline-flex;
+    align-items:center;
+    min-height:44px;
+  }
+  .text-links {
+    column-gap:14px;
+  }
+  .circle-arrow {
+    background:var(--ink);
+    color:white;
+  }
+}
+
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior:auto;

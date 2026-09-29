@@ -1,5 +1,6 @@
 const svg = document.querySelector('#idea-map');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const hoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 const NS = 'http://www.w3.org/2000/svg';
 let variation = 0;
 let nodes = [];
@@ -46,12 +47,15 @@ function draw(time) {
 function animate(time) { draw(time); if (visible && !document.hidden && !reducedMotion.matches) frame = requestAnimationFrame(animate); }
 function restart() { cancelAnimationFrame(frame); if (visible && !document.hidden && !reducedMotion.matches) frame = requestAnimationFrame(animate); else draw(0); }
 svg.addEventListener('pointermove', event => {
+  if (!hoverPointer.matches || event.pointerType === 'touch') return;
   const matrix = svg.getScreenCTM();
   if (!matrix) return;
   const point = new DOMPoint(event.clientX, event.clientY).matrixTransform(matrix.inverse());
   pointer = { x: point.x, y: point.y, active: true };
 });
 svg.addEventListener('pointerleave', () => { pointer.active = false; });
+svg.addEventListener('pointercancel', () => { pointer.active = false; });
+hoverPointer.addEventListener('change', () => { pointer.active = false; });
 document.querySelector('#shuffle').addEventListener('click', () => { variation++; build(); });
 reducedMotion.addEventListener('change', restart);
 new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; restart(); }).observe(svg);

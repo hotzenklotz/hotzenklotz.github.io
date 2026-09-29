@@ -10,10 +10,23 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+      <symbol id="icon-arrow-down-right" viewBox="0 0 24 24"><path d="m5 5 14 14M5 19h14V5"/></symbol>
+      <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="M12 20V4m-7 7 7-7 7 7"/></symbol>
+      <symbol id="icon-arrow-down" viewBox="0 0 24 24"><path d="M12 4v16m-7-7 7 7 7-7"/></symbol>
+      <symbol id="icon-asterisk" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/></symbol>
+      <symbol id="icon-shuffle" viewBox="0 0 24 24"><path d="M3 6h3c5 0 7 12 12 12h3m-4-4 4 4-4 4M3 18h3c2 0 3-2 4-4m4-4c1-2 2-4 4-4h3m-4-4 4 4-4 4"/></symbol>
+      <symbol id="icon-location" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 4l-4 16"/></symbol>
+      <symbol id="icon-scan" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5M8 8h8v8H8z"/></symbol>
+    </defs>
+  </svg>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="header wrap">
-    <a class="wordmark" href="#" aria-label="Tom Herold home">tom herold<span>✳</span></a>
-    <nav aria-label="Main navigation"><a href="#work">My work</a><a href="#interests">What drives me</a><a class="nav-contact" href="https://de.linkedin.com/in/tom-herold-5556066a">Say hello <span>↗</span></a></nav>
+    <a class="wordmark" href="#" aria-label="Tom Herold home">tom herold<span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-asterisk"/></svg></span></a>
+    <nav aria-label="Main navigation"><a href="#work">My work</a><a href="#interests">What drives me</a><a class="nav-contact" href="https://de.linkedin.com/in/tom-herold-5556066a">Say hello <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></a></nav>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
@@ -21,47 +34,47 @@
         <p class="eyebrow"><span class="status-dot"></span> ENGINEER. CO-FOUNDER. CURIOUS HUMAN.</p>
         <h1 id="hero-title">Connecting<br>ideas.<br>Building <em>things.</em></h1>
         <p class="intro">Hi, I’m Tom. I turn complex problems into useful software. Currently, helping science see more at <a href="https://scalableminds.com">scalableminds</a>.</p>
-        <a class="button" href="#work">Explore my work <span>↘</span></a>
+        <a class="button" href="#work">Explore my work <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-down-right"/></svg></span></a>
       </div>
       <div class="idea-space">
         <div class="diagram-top"><span>FIG. 01 — A CONNECTED MIND</span><span class="live-dot">LIVE</span></div>
         <svg id="idea-map" viewBox="0 0 520 480" role="img" aria-label="An abstract network of connected ideas with colored nodes"></svg>
         <span class="orbit-label label-science">science</span><span class="orbit-label label-code">code</span><span class="orbit-label label-curiosity">curiosity</span>
-        <div class="diagram-bottom"><span>A little curiosity goes a long way.</span><button id="shuffle" type="button" aria-label="Rearrange the connected ideas">Mix things up <span>⤨</span></button></div>
+        <div class="diagram-bottom"><span>A little curiosity goes a long way.</span><button id="shuffle" type="button" aria-label="Rearrange the connected ideas">Mix things up <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-shuffle"/></svg></span></button></div>
       </div>
-      <div class="hero-foot"><span><span class="location-mark">⊙</span> BASED IN POTSDAM, GERMANY</span><span>GOOD THINGS START WITH A CONNECTION <span class="down-arrow">↓</span></span></div>
+      <div class="hero-foot"><span><span class="location-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-location"/></svg></span> BASED IN POTSDAM, GERMANY</span><span>GOOD THINGS START WITH A CONNECTION <span class="down-arrow"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-down"/></svg></span></span></div>
     </section>
     <section class="work-section wrap" id="work" aria-labelledby="work-title">
       <div class="section-heading"><p class="eyebrow">01 / THINGS I HELP BUILD</p><h2 id="work-title">Small team.<br><span>Big questions.</span></h2><p>Better tools make new discoveries possible.<br>That’s where our work begins.</p></div>
       <div class="work-grid">
         <a class="work-card company-card" href="https://scalableminds.com">
-          <div class="card-top"><span class="pill">THE COMPANY</span><span class="circle-arrow">↗</span></div>
+          <div class="card-top"><span class="pill">THE COMPANY</span><span class="circle-arrow"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></div>
           <div class="company-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="card-copy"><p class="small-label">CO-FOUNDER</p><h3>scalableminds<span class="accent">.</span></h3><p>A software engineering team with a scientific mind. We build high-performance tools and AI solutions for research and academia.</p><div class="card-footer"><span>Software engineering × Scientific discovery</span><span>scalableminds.com ↗</span></div></div>
+          <div class="card-copy"><p class="small-label">CO-FOUNDER</p><h3>scalableminds<span class="accent">.</span></h3><p>A software engineering team with a scientific mind. We build high-performance tools and AI solutions for research and academia.</p><div class="card-footer"><span>Software engineering × Scientific discovery</span><span>scalableminds.com <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></div></div>
         </a>
         <a class="work-card product-card" href="https://webknossos.com">
-          <div class="card-top"><span class="pill">THE PRODUCT</span><span class="circle-arrow">↗</span></div>
+          <div class="card-top"><span class="pill">THE PRODUCT</span><span class="circle-arrow"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></div>
           <div class="volume-art" aria-hidden="true"><div class="volume-plane plane-one"></div><div class="volume-plane plane-two"></div><div class="volume-plane plane-three"></div><span class="volume-caption">X: 128 &nbsp; Y: 256 &nbsp; Z: 064</span></div>
-          <div class="card-copy"><p class="small-label">MAKING THE INVISIBLE EXPLORABLE</p><h3>WEBKNOSSOS</h3><p>Big data. Tiny details. A collaborative platform to explore, annotate, and understand 3D microscopy data, right in your browser.</p><div class="card-footer"><span>3D visualization × AI annotation</span><span>webknossos.com ↗</span></div></div>
+          <div class="card-copy"><p class="small-label">MAKING THE INVISIBLE EXPLORABLE</p><h3>WEBKNOSSOS</h3><p>Big data. Tiny details. A collaborative platform to explore, annotate, and understand 3D microscopy data, right in your browser.</p><div class="card-footer"><span>3D visualization × AI annotation</span><span>webknossos.com <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></div></div>
         </a>
       </div>
       <div class="research-note"><span>BUILT FOR SCIENCE. USED BY TEAMS AT</span><div>Max Planck <i>·</i> Harvard <i>·</i> Francis Crick <i>·</i> EMBL <i>·</i> EPFL</div></div>
     </section>
     <section class="interests-section" id="interests" aria-labelledby="interests-title"><div class="wrap">
-      <div class="interests-header"><div><p class="eyebrow">02 / THE COMMON THREAD</p><h2 id="interests-title">Driven by curiosity<span class="accent">.</span></h2></div><span class="asterisk" aria-hidden="true">✳</span></div>
+      <div class="interests-header"><div><p class="eyebrow">02 / THE COMMON THREAD</p><h2 id="interests-title">Driven by curiosity<span class="accent">.</span></h2></div><span class="asterisk" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-asterisk"/></svg></span></div>
       <div class="interests-grid">
-        <article><span class="interest-icon" aria-hidden="true">&lt;/&gt;</span><h3>Open by default.</h3><p>Good ideas get better when they’re shared. Contributing to open source and the Zarr community is part of how I build.</p><div class="text-links"><a href="https://github.com/scalableminds/webknossos">WEBKNOSSOS ↗</a><a href="https://github.com/mozilla-b2g">Firefox OS ↗</a><a href="https://github.com/RasaHQ/rasa">Rasa ↗</a></div></article>
-        <article><span class="interest-icon" aria-hidden="true">⌘</span><h3>From pixels to insight.</h3><p>I’m interested in what happens when machine learning meets real scientific problems. Especially when the result helps someone discover something new.</p><div class="tags"><span>AI & machine learning</span><span>3D microscopy</span></div></article>
-        <article><span class="interest-icon" aria-hidden="true">↗</span><h3>Ideas into working tools.</h3><p>From a fast interface to the data behind it, I enjoy connecting the pieces and making complex technology feel approachable.</p><div class="tags"><span>TypeScript</span><span>React</span><span>Python</span><span>PyTorch</span></div></article>
+        <article><span class="interest-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-code"/></svg></span><h3>Open by default.</h3><p>Good ideas get better when they’re shared. Contributing to open source and the Zarr community is part of how I build.</p><div class="text-links"><a href="https://github.com/scalableminds/webknossos">WEBKNOSSOS <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></a><a href="https://github.com/mozilla-b2g">Firefox OS <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></a><a href="https://github.com/RasaHQ/rasa">Rasa <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></a></div></article>
+        <article><span class="interest-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-scan"/></svg></span><h3>From pixels to insight.</h3><p>I’m interested in what happens when machine learning meets real scientific problems. Especially when the result helps someone discover something new.</p><div class="tags"><span>AI & machine learning</span><span>3D microscopy</span></div></article>
+        <article><span class="interest-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span><h3>Ideas into working tools.</h3><p>From a fast interface to the data behind it, I enjoy connecting the pieces and making complex technology feel approachable.</p><div class="tags"><span>TypeScript</span><span>React</span><span>Python</span><span>PyTorch</span></div></article>
       </div>
     </div></section>
     <section class="publications wrap" aria-labelledby="publications-title"><div><p class="eyebrow">03 / A FEW THINGS ON PAPER</p><h2 id="publications-title">Research,<br>in the wild.</h2><p>Some of the science behind the software.</p></div><div class="paper-list">
-      <a href="https://www.nature.com/articles/nmeth.4331"><span class="paper-meta">NATURE METHODS</span><h3>WEBKNOSSOS: efficient online visualization and labeled data generation for 3D EM</h3><span class="paper-arrow">↗</span></a>
-      <a href="https://arxiv.org/abs/1708.04811"><span class="paper-meta">INTERNATIONAL CONFERENCE ON NEURAL INFORMATION PROCESSING</span><h3>Language identification using deep convolutional recurrent neural networks</h3><span class="paper-arrow">↗</span></a>
-      <a href="https://www.nature.com/articles/s41598-023-39826-8"><span class="paper-meta">SCIENTIFIC REPORTS</span><h3>Deep learning-based automated lesion segmentation on mouse stroke MRI</h3><span class="paper-arrow">↗</span></a>
+      <a href="https://www.nature.com/articles/nmeth.4331"><span class="paper-meta">NATURE METHODS</span><h3>WEBKNOSSOS: efficient online visualization and labeled data generation for 3D EM</h3><span class="paper-arrow"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></a>
+      <a href="https://arxiv.org/abs/1708.04811"><span class="paper-meta">INTERNATIONAL CONFERENCE ON NEURAL INFORMATION PROCESSING</span><h3>Language identification using deep convolutional recurrent neural networks</h3><span class="paper-arrow"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></a>
+      <a href="https://www.nature.com/articles/s41598-023-39826-8"><span class="paper-meta">SCIENTIFIC REPORTS</span><h3>Deep learning-based automated lesion segmentation on mouse stroke MRI</h3><span class="paper-arrow"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></a>
     </div></section>
-    <section class="contact wrap"><div><p class="eyebrow">ALWAYS UP FOR A GOOD CONVERSATION</p><h2>Let’s connect<span>↗</span></h2></div><div class="contact-links"><a href="https://de.linkedin.com/in/tom-herold-5556066a">Find me on LinkedIn <span>↗</span></a><a href="https://github.com/hotzenklotz">Follow along on GitHub <span>↗</span></a></div></section>
+    <section class="contact wrap"><div><p class="eyebrow">ALWAYS UP FOR A GOOD CONVERSATION</p><h2>Let’s connect<span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></h2></div><div class="contact-links"><a href="https://de.linkedin.com/in/tom-herold-5556066a">Find me on LinkedIn <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></a><a href="https://github.com/hotzenklotz">Follow along on GitHub <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up-right"/></svg></span></a></div></section>
   </main>
-  <footer class="footer wrap"><span>© <span id="year">2026</span> Tom Herold</span><span>Made of code & curiosity.</span><a href="#">Back to top ↑</a></footer>
+  <footer class="footer wrap"><span>© <span id="year">2026</span> Tom Herold</span><span>Made of code & curiosity.</span><a href="#">Back to top <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-up"/></svg></a></footer>
 </body>
 </html>
